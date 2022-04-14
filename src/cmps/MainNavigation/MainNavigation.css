@@ -1,0 +1,52 @@
+.navigationContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.leftNavSide {
+    display: flex;
+    align-items: center;
+}
+
+.navLinkItem {
+    margin-left: 2.5em;
+}
+
+.rightNavSide {
+    display: flex;
+    align-items: center;
+}
+
+.navDivider {
+    margin: 0 0.5em;
+}
+
+.navIcon {
+    margin: 0 0.5em;
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 50%;
+    right: 0.3em;
+    transform: translateY(-50%);
+}
+
+.searchInput {
+    height: 1.9em;
+    width: 30em;
+    border-radius: 0.5em;
+}
+
+.navUserName {
+    font-weight: 600;
+}
