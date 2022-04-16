@@ -50,3 +50,8 @@
 .navUserName {
     font-weight: 600;
 }
+
+.navLinkItem_clear-style{
+    text-decoration: none;
+    color: black;
+}
