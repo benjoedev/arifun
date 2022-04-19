@@ -6,10 +6,21 @@ const mockStats = 'Pre Term Sheet'
 const mockTestText = 'The application data corresponds to the requirements. In order to continue to the next step send\n' +
     '                        term sheet to the borrower'
 
+const mockObj = {
+    mockStatus: 'Pre Term Sheet',
+    mockTestText: 'The application data corresponds to the requirements. In order to continue to the next step send\n' +
+        '                        term sheet to the borrower',
+    mockStatusBorder: 'high'
+}
+
+const colorStatus = (mockObj) => {
+   return (mockObj.mockStatusBorder === 'high') ? 'rgb(59, 196, 96)' : (mockObj.mockStatusBorder === 'middle') ? 'yellow' : 'red'
+}
+
 const RequestStats = () => {
     return (
         <>
-            <div className='container-fluid stats-block'>
+            <div className='container-fluid stats-block' style={{borderLeft: `5px solid ${colorStatus(mockObj)}`}}>
                 <div className='row'>
                     <div className='col-lg-10 col-md-9 left-block'>
                         <p className='stats-p stats-title'>Status <span className='stats-title-text'>{mockStats}</span></p>

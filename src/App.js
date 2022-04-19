@@ -24,7 +24,6 @@ function App() {
                         element={<Dashboard/>}
                     />)
                 }
-                {/*<Route path='/requests' element={<Requests/>}/>*/}
                 <Route path='/requests' element={<LoanPage/>}/>
                 <Route path='/activities' element={<Activities/>}/>
                 <Route path='/statics' element={<Statics/>}/>

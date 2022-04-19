@@ -13,11 +13,6 @@ const MainNavigation = () => {
                     width={50}
                 />
 
-                {/*<span className='navLinkItem'>Dashboard</span>*/}
-                {/*<span className='navLinkItem'>Requests</span>*/}
-                {/*<span className='navLinkItem'>Activities</span>*/}
-                {/*<span className='navLinkItem'>Statics</span>*/}
-                {/*<span className='navLinkItem'>Leads</span>*/}
 
                 {/*
                     Mock Link navigation
