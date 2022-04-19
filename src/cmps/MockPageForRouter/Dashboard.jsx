@@ -20,9 +20,9 @@ const Dashboard = () => {
         <div className='router-pages-test'>
             <h1>Dashboard</h1> <br/>
 
-            <button onClick={increaseN} className='mock-btn'>Increase</button>
-            <div>{count}</div>
-            <button onClick={decreaseN}  className='mock-btn'>Decrease</button>
+            {/*<button onClick={increaseN} className='mock-btn'>Increase</button>*/}
+            {/*<div>{count}</div>*/}
+            {/*<button onClick={decreaseN}  className='mock-btn'>Decrease</button>*/}
 
         </div>
     );

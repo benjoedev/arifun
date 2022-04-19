@@ -49,14 +49,6 @@ const CardComp = ({ headerDetails, cardDetails, borrower }) => {
                         <span className='showDetailsText'>Show Details</span>
                     </div>)}
 
-
-
-
-
-
-
-
-
             </div>
         </>
     )
