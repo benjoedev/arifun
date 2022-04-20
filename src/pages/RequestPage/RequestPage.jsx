@@ -1,36 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './RequestPage.css'
 import {Link} from "react-router-dom";
-
-const requestMockArr = [
-    {
-        id: '0001',
-        address: 'USA'
-    },
-    {
-        id: '0002',
-        address: 'Israel'
-    },
-    {
-        id: '0003',
-        address: 'Canada'
-    },
-]
-
+import {useDispatch, useSelector} from "react-redux";
+import {getAllRequests} from "../../redux/actions/requstsActions";
 
 const RequestPage = () => {
+    const {requests} = useSelector(state => state.requestsReducer)
+    const dispatch = useDispatch()
+
+    useEffect(()=>{
+        dispatch(getAllRequests())
+    }, [])
+
     return (
         <div className='wrapper-request-page'>
-            {
-                requestMockArr.map((el, idx) => (
+            { requests &&
+                requests.map((el, idx) => (
                     <div
-                        key={el.id} className='request-block'
+                        key={el.id + idx} className='request-block'
                         data-id={el.id}
                     >
-                        <Link to='/requests/loanpage:' className='link-loan_page'>Go to Loan Page</Link>
-                        {/*<Link to= className='link-loan_page'>Go to Loan Page</Link>*/}
-
-                        <span> {el.id}</span>
+                        <Link to={`/request/loanpage/${el.id}`} className='link-loan_page'>Go to Loan Page {el.id}</Link>
                     </div>
                 ))
             }

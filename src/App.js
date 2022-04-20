@@ -27,7 +27,7 @@ function App() {
                 }
                 {/*<Route path='/requests' element={<LoanPage/>}/>*/}
                 <Route path='/requests' element={<RequestPage/>}/>
-                <Route path='/requests/loanpage' element={<LoanPage/>}/>
+                <Route path='/request/loanpage/:id' element={<LoanPage/>}/>
 
                 <Route path='/activities' element={<Activities/>}/>
                 <Route path='/statics' element={<Statics/>}/>
