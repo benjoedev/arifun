@@ -10,6 +10,7 @@ import Requests from "./cmps/MockPageForRouter/Requests";
 import Activities from "./cmps/MockPageForRouter/Activities";
 import Statics from "./cmps/MockPageForRouter/Statics";
 import Leads from "./cmps/MockPageForRouter/Leads";
+import RequestPage from "./pages/RequestPage/RequestPage";
 
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
                         element={<Dashboard/>}
                     />)
                 }
-                <Route path='/requests' element={<LoanPage/>}/>
+                {/*<Route path='/requests' element={<LoanPage/>}/>*/}
+                <Route path='/requests' element={<RequestPage/>}/>
+                <Route path='/request/loanpage/:id' element={<LoanPage/>}/>
+
                 <Route path='/activities' element={<Activities/>}/>
                 <Route path='/statics' element={<Statics/>}/>
                 <Route path='/leads' element={<Leads/>}/>

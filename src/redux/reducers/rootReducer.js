@@ -1,7 +1,7 @@
 import {combineReducers} from "redux";
-import {mockReducer} from "./mockReducer";
+import {requestsReducer} from "./requestsReducer";
 
 
 export const rootReducer = combineReducers({
-    mockReducer
+    requestsReducer
 })
