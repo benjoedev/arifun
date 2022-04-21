@@ -7,8 +7,8 @@ import {Link, NavLink} from "react-router-dom";
 
 const MainNavigation = () => {
 
-    const activeLink ='navLinkItem navLinkItem_clear-style navLinkItem-active'
-    const deactiveLink ='navLinkItem navLinkItem_clear-style'
+    const setActive = ({isActive}) => isActive ? 'navLinkItem navLinkItem_clear-style navLinkItem-active' : 'navLinkItem navLinkItem_clear-style'
+
 
     return (
         <div className='navigationContainer'>
@@ -23,20 +23,15 @@ const MainNavigation = () => {
 
 
                     <div className='col-xl-5 col-lg-5 col-md-10 nav-links'>
-                        <NavLink
-                            className={({isActive}) => isActive ? `${activeLink}` : `${deactiveLink}`}
+                        <NavLink className={setActive}
                             to='/dashboard'>Dashboard</NavLink>
-                        <NavLink
-                            className={({isActive}) => isActive ? `${activeLink}` : `${deactiveLink}`}
+                        <NavLink className={setActive}
                             to='/requests'>Requests</NavLink>
-                        <NavLink
-                            className={({isActive}) => isActive ? `${activeLink}` : `${deactiveLink}`}
+                        <NavLink className={setActive}
                             to='/activities'>Activities</NavLink>
-                        <NavLink
-                            className={({isActive}) => isActive ? `${activeLink}` : `${deactiveLink}`}
+                        <NavLink className={setActive}
                             to='/statics'>Statics</NavLink>
-                        <NavLink
-                            className={({isActive}) => isActive ? `${activeLink}` : `${deactiveLink}`}
+                        <NavLink className={setActive}
                             to='/leads'>Leads</NavLink>
                     </div>
 
